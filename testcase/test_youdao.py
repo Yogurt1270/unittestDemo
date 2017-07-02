@@ -10,21 +10,17 @@ class MyTest(unittest.TestCase):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
-        self.base_url = "http://www.baidu.com"
+        self.base_url = "http://www.youdao.com"
 
-    def test_baidu(self):
+    def test_youdao(self):
         driver = self.driver
         driver.get(self.base_url + '/')
-        driver.find_element_by_id("kw").clear()
-        driver.find_element_by_id("kw").send_keys("unittest")
-        driver.find_element_by_id("su").click()
+        driver.find_element_by_id("query").clear()
+        driver.find_element_by_id("query").send_keys("webdriver")
+        driver.find_element_by_id("qb").click()
         time.sleep(2)
         title = driver.title
-        self.assertEqual(title, "unittest_百度搜索")
+        self.assertEqual(title, "webdriver - 有道搜索")
 
     def tearDown(self):
         self.driver.quit()
-
-
-if __name__ == "__name__":
-    unittest.main()
