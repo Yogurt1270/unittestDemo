@@ -1,3 +1,5 @@
+# coding:utf-8
+
 # 计算器类
 class Count:
     def __init__(self, a, b):
