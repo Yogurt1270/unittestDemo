@@ -2,6 +2,7 @@
 
 from calculator import Count
 from myclass import MyClass
+import unittest
 
 
 class TestAdd(MyClass):
