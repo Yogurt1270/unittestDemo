@@ -9,6 +9,6 @@ class TestSub(MyClass):
         j = Count(2, 3)
         self.assertEqual(j.add(), 5)
 
-    def test_sub(self):
+    def test_sub2(self):
         j = Count(41, 76)
         self.assertEqual(j.add(), 117)
